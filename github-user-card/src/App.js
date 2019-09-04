@@ -14,7 +14,7 @@ class App extends Component{
   componentDidMount=()=>{
     axios.get(`https://api.github.com/users/H4rliquinn/followers`)
     .then((res)=>{
-      console.log("Data",res.data);
+      // console.log("Data",res.data);
       this.setState({
         data:[...res.data]
       });
@@ -25,14 +25,14 @@ class App extends Component{
     // console.log("State",this.state);
   }
 
-  componentDidUpdate(){
-    console.log("State",this.state);
+  componentDidUpdate=()=>{
+    // console.log("State",this.state);
   }
 
   render(){
     return (
       <div className="container">
-        <div id="Username">
+        {/* <div id="Username">
           Username:<input type="text" length="30" id="nameText" placeholder="H4rliquinn"/>
           <button id="friendButton">Find Friends</button>
         </div>
@@ -43,7 +43,7 @@ class App extends Component{
           <a href="http://cnn.com">3</a>
           <a href="http://cnn.com">4</a>
           <a href="http://cnn.com">5</a>
-        </div>
+        </div> */}
         <div className="cards">
           <CardList followers={this.state.data}/>
         </div>
