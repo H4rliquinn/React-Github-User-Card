@@ -2,15 +2,15 @@ import React,{Component} from 'react';
 import './Card.scss';
 
 class Card extends Component {
-    
+    state=[];
     componentDidMount(){
         // console.log("Card Props",this.props.person);
     }
 
     render() { 
         return ( 
-            <div className="card">Returned Card
-                <img src={this.props.person.avatar_url} />
+            <div className="card">
+                <img src={this.props.person.avatar_url} alt="Profile" />
                 <div className="card-info">
                     <h3 className="name">{this.props.person.name}</h3>
                     <p className="username">{this.props.person.login}</p>
